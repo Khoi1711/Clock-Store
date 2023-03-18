@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TKQClock.Models.DongHo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div>
+    @foreach (var clock in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Chitietdongho", "ClockStore", new { id = clock.MaDH})">
+                    <img alt="@clock.TenDH" src="@clock.ImgUrl" width="200" height="300" />
+                    <div>
+                        <br />
+                        <h4 style="text-align:center">
+                            @clock.TenDH
+                        </h4>
+                        <p></p>
+                    </div>
+            </div>
+        </div>
+    }
+</div>

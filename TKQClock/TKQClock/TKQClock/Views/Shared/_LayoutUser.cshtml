@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/Content/ClockStoreCss/style.css">
+    <link rel="stylesheet" href="~/Content/ClockStoreCss/signup.css">
+    <link rel="stylesheet" href="~/Content/ClockStoreCss/responsive.css">
+    <link href="~/Content/ClockStoreCss/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/ClockStoreCss/shop-homepage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="header">
+        <img src="~/images/LOGO1.png" alt="" style="float: left;">
+        <ul id="nav">
+            <li><a href="#"><i class="icon-search ti-search"></i></a></li>
+            <li>
+                <a href="#">Hãng </a>
+                <ul class="subnav">
+                    @Html.Action("Hang", "ClockStore")
+                </ul>
+            </li>
+            <li>
+                <a href="#">Loại</a>
+                <ul class="subnav">
+                    @Html.Action("Loai", "ClockStore")
+                </ul>
+            </li>
+            <li><a href="#products">Sản phẩm <i class="fa-regular fa-clock"></i></i></a></li>
+            <li><a href="#map">Liên hệ <i class="icon-cont ti-email"></i></a></li>
+            <li><a href="#">Giỏ hàng <i class="icon-shopping ti-shopping-cart"></i></a></li>
+            <li><a href="#">Tài khoản <i class="icon-user ti-user"></i></a></li>
+            <li><a href="#contact">Hỗ trợ <i class="icon-help ti-headphone-alt"></i></a></li>
+        </ul>
+        <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="menu-icon ti-menu"></i>
+        </div>
+        <!-- begin search button -->
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div id="map" class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4205948966046!2d106.78291401534769!3d10.855580060694717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276e7ea103df%3A0xb6cf10bb7d719327!2zSHV0ZWNoIEtodSBFIC0gVHJ1bmcgVMOibSDEkMOgbyBU4bqhbyBOaMOibiBM4buxYyBDaOG6pXQgTMaw4bujbmcgQ2Fv!5e0!3m2!1svi!2s!4v1677309859870!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="footer">
+        <div class="social-list">
+            <a href=""><i class="ti-facebook"></i></a>
+            <a href=""><i class="ti-instagram"></i></a>
+            <a href=""><i class="ti-youtube"></i></a>
+            <a href=""><i class="ti-pinterest"></i></a>
+            <a href=""><i class="ti-twitter"></i></a>
+            <a href=""><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="copyright">Copyright © 2023  TDK Team. All rights reserved.</p>
+    </div>
+</body>
+</html>

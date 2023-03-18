@@ -1,0 +1,64 @@
+﻿
+<style type="text/css">
+    #Datmua a {
+        clear: both;
+        background-color: red;
+        color: white;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        #Datmua a:hover {
+            background-color: gray;
+            color: red;
+        }
+</style>
+@{
+    ViewBag.Title = "Chitietdongho";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="container">
+    <div id="content-detail">
+        <div class="name">
+            <h2 class="mt-48 mr-16 name">@Model.TenDH</h2>
+            <hr>
+        </div>
+        <div class="content">
+            <div class="mt-48 content-left pull-left left-content">
+                <img src="@Model.ImgUrl" alt="@Model.TenDH" class="item-img">
+            </div>
+            <div class="contetn-right right-content">
+                <p class="item-detail">@Model.MoTaNgan</p>
+                <ul class="detail">
+                    <ul class="item-properties">
+                        <ul>
+                            <li>@Model.NoiDung</li>
+                            <li>@Model.ChatLieu</li>
+                            <li>@Model.Dai</li>
+                            <li>@Model.KichThuoc</li>
+                            <li>@Model.Mausac</li>
+                            <li>@Model.Maubanhxe</li>
+                        </ul>
+                        <br>
+                        <li class="item-model"><span class="key">Model:</span> <span class="value">@Model.TenDH</span></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+@* <div>
+        <div id="Datmua">
+            <a href="@Url.Action("ThemGiohang", "GioHang", new { id = @Model.Masach ,  strURL=Request.Url.ToString()  })" class="list-group-item">
+                ĐẶT MUA
+            </a>
+        </div>
+    </div>*@
+
