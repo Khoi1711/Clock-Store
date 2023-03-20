@@ -1,8 +1,8 @@
-﻿Create database Demo2
-Use Demo2
+﻿Create database Demo1
+Use Demo1
 go
 Create table TaiKhoan( 
-	TenDangNhap varchar(20) unique ,
+	TenDangNhap varchar(20) not null unique ,
 	MatKhau varchar(30) not null,
 	Permison bit not null
 	Primary key (TenDangNhap)
@@ -12,7 +12,7 @@ Create table Admin(
 	MaNV INT IDENTITY(1,1),
 	HoTen nvarchar(50) not null,
 	GioiTinh varchar(3),
-	TenDangNhap varchar(20) unique,
+	TenDangNhap varchar(20) ,
 	Primary key (MANV),
 	Constraint PK_MaTK foreign key (TenDangNhap) references TaiKhoan on update cascade
 )
@@ -25,7 +25,7 @@ Create table KhachHang(
 	Email varchar(100) unique,
 	SDT varchar(50) ,
 	DiaChi nvarchar(200),
-	TenDangNhap varchar(20) unique,
+	TenDangNhap varchar(20) ,
 	ConStraint PK_MaTK_Customers Foreign key (TenDangNhap) references TaiKhoan on update cascade
 )
 go
